@@ -10,6 +10,7 @@ public class TaxCalculatorComponentsImp implements TaxCalculatorComponents{
         if (income>48000 && income<=70000) return income * (30 / 100);
         if (income>70000 && income<=180000) return income * (33 / 100);
         if (income>180000) return income * (39 / 100);
+        if (income>0 && income<=13999) return income * (10.5 / 100);
         return income * (10.5/100);
     }
 

@@ -54,4 +54,11 @@ public class TaxCalculatorComponentsImpTest {
         double expectedTaxToPay = income * (39 / 100);
         Assertions.assertEquals(expectedTaxToPay,actualTaxToPay,"Amount is not as expected ");
     }
+    @Test
+    public void taxBracketFisAppliedWhenIncomeIsBellow0k() {
+        double income = 0;
+        double actualTaxToPay = taxCalculatorComponents.calculateTax(income);
+        double expectedTaxToPay = income * (10.5 / 100);
+        Assertions.assertEquals(expectedTaxToPay, actualTaxToPay, "Amount is not as expected ");
+    }
 }
